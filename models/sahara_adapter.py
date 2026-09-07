@@ -35,7 +35,14 @@ def _upload(audio_path: str, language_code: str, api_key: str) -> str:
         }
         resp = requests.post(UPLOAD_URL, headers=headers, files=files, data=data, timeout=120)
 
-    resp.raise_for_status()
+    if not resp.ok:
+        # Surface Sahara's actual error body instead of the generic
+        # "400 Client Error: Bad Request" requests gives by default.
+        raise RuntimeError(
+            f"Sahara upload failed for {audio_path} "
+            f"(status {resp.status_code}): {resp.text}"
+        )
+
     payload = resp.json()
     file_id = payload["data"]["file_id"]
     return file_id

@@ -1,0 +1,9 @@
+language,model,wer_normalized,cer_normalized,wer_raw,cer_raw,latency_sec
+hausa-english,assemblyai-universal,0.8457,0.4373,0.9334,0.5071,12.5566
+hausa-english,whisper-large-v3-groq,0.9011,0.4737,0.961,0.5242,5.7535
+igbo-english,assemblyai-universal,0.55,0.3326,0.6347,0.3675,16.2658
+igbo-english,whisper-large-v3-groq,0.5734,0.3786,0.6698,0.4145,8.9226
+pidgin-english,assemblyai-universal,15.6743,16.3053,15.7939,16.5704,14.5936
+pidgin-english,whisper-large-v3-groq,14.7524,14.7806,14.8707,14.5332,9.176
+yoruba-english,assemblyai-universal,0.569,0.3766,0.6702,0.4178,21.7818
+yoruba-english,whisper-large-v3-groq,0.6557,0.4524,0.7273,0.482,12.6997
